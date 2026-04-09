@@ -1,6 +1,6 @@
 export default function MainSection() {
   return (
-    <section id="top" className="relative min-h-screen bg-white overflow-hidden font-sans pt-24">
+    <section id="top" className="relative min-h-screen bg-white overflow-hidden font-sans pt-20">
       {/* Background decorative blobs */}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/4 w-44 h-80 rounded-3xl"

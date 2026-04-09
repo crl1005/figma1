@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import MainSection from "./components/MainSection";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
@@ -6,21 +7,21 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 import Section7 from "./components/Section7";
 import LastSection from "./components/LastSection";
-import Header from "./components/Header";
  
 export default function Home() {
   return (
-    <main className="pt-24">
-      <MainSection />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      <Section7 />
-      <LastSection />
+    <>
       <Header />
-
-    </main>
+      <main>
+        <MainSection />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <LastSection />
+      </main>
+    </>
   );
 }
