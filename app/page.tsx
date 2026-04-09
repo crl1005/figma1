@@ -6,10 +6,11 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 import Section7 from "./components/Section7";
 import LastSection from "./components/LastSection";
+import Header from "./components/Header";
  
 export default function Home() {
   return (
-    <main>
+    <main className="pt-24">
       <MainSection />
       <Section2 />
       <Section3 />
@@ -18,6 +19,7 @@ export default function Home() {
       <Section6 />
       <Section7 />
       <LastSection />
+      <Header />
 
     </main>
   );

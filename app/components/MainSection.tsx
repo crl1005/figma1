@@ -1,6 +1,6 @@
 export default function MainSection() {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden font-sans">
+    <section id="top" className="relative min-h-screen bg-white overflow-hidden font-sans pt-24">
       {/* Background decorative blobs */}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/4 w-44 h-80 rounded-3xl"
@@ -10,40 +10,6 @@ export default function MainSection() {
         className="absolute right-0 top-1/2 translate-y-8 w-44 h-80 rounded-3xl"
         style={{ backgroundColor: "#8a9e5b" }}
       />
-
-      {/* Navbar */}
-      <nav className="relative z-10 flex items-center justify-between px-16 py-6">
-        <span
-          className="text-2xl font-semibold tracking-tight"
-          style={{ fontFamily: "Georgia, serif", color: "#1a1a1a" }}
-        >
-          Area
-        </span>
-
-        <ul className="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
-          {[
-            { label: 'Benefits', href: '#benefits' },
-            { label: 'Specifications', href: '#specifications' },
-            { label: 'How-to', href: '#how-to' },
-            { label: 'Contact Us', href: '#contact' }
-          ].map((item) => (
-            <li key={item.label}>
-              <a href={item.href} className="hover:text-gray-900 transition-colors duration-200">
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <a
-          href="#contact"
-          className="flex items-center gap-1 text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-opacity duration-200 hover:opacity-90"
-          style={{ backgroundColor: "#4a5e2a" }}
-        >
-          Learn More
-          <span className="text-base leading-none">↗</span>
-        </a>
-      </nav>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 pt-16 pb-0">
