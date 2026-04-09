@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 
 export default function Home() {
@@ -61,5 +62,22 @@ export default function Home() {
         </div>
       </main>
     </div>
+=======
+﻿import MainSection from "./components/MainSection";
+import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
+import Section4 from "./components/Section4";
+import Section5 from "./components/Section5";
+
+export default function Page() {
+  return (
+    <>
+      <MainSection />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />s
+    </>
+>>>>>>> 5303206ac75b3bc1869cda27c242a81e40fc4588
   );
 }

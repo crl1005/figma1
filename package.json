@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "figma1",
+=======
+  "name": "figma",
+>>>>>>> 5303206ac75b3bc1869cda27c242a81e40fc4588
   "version": "0.1.0",
   "private": true,
   "scripts": {
