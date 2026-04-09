@@ -8,7 +8,7 @@ export default function Section4() {
 
   return (
     <section className="bg-white px-16 pb-24">
-      <div className="rounded-2xl overflow-hidden mb-16 w-full h-72 md:h-80">
+      <div className="rounded-2xl overflow-hidden mb-16 w-full h-60 md:h-72">
         <img
           src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80"
           alt="Colorful mountain landscape"

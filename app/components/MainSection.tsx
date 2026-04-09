@@ -69,6 +69,8 @@ export default function MainSection() {
           <div className="h-4 rounded-b-3xl mx-4" style={{ backgroundColor: "#2a2a3a" }} />
         </div>
       </div>
+                  
+
     </section>
   );
 }
