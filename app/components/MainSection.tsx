@@ -21,17 +21,22 @@ export default function MainSection() {
         </span>
 
         <ul className="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
-          {['Benefits', 'Specifications', 'How-to', 'Contact Us'].map((item) => (
-            <li key={item}>
-              <a href="#" className="hover:text-gray-900 transition-colors duration-200">
-                {item}
+          {[
+            { label: 'Benefits', href: '#benefits' },
+            { label: 'Specifications', href: '#specifications' },
+            { label: 'How-to', href: '#how-to' },
+            { label: 'Contact Us', href: '#contact' }
+          ].map((item) => (
+            <li key={item.label}>
+              <a href={item.href} className="hover:text-gray-900 transition-colors duration-200">
+                {item.label}
               </a>
             </li>
           ))}
         </ul>
 
         <a
-          href="#"
+          href="#contact"
           className="flex items-center gap-1 text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-opacity duration-200 hover:opacity-90"
           style={{ backgroundColor: "#4a5e2a" }}
         >

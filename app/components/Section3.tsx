@@ -46,7 +46,7 @@ export default function Section3() {
   ];
 
   return (
-    <section className="bg-white px-16 pt-16 pb-20">
+    <section id="benefits" className="bg-white px-16 pt-16 pb-20">
       <p className="text-xs font-mono mb-6" style={{ color: "#6b7c45" }}>Benefits</p>
       <h2
         className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight"

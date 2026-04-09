@@ -1,67 +1,100 @@
-export default function Section5() {
-  const highlights = [
-    { num: '01', title: 'Spot Trends in Seconds:', body: 'No more digging through numbers.' },
-    { num: '02', title: 'Get Everyone on the Same Page:', body: 'Share easy-to-understand reports with your team.' },
-    { num: '03', title: 'Make Presentations Pop:', body: 'Interactive maps and dashboards keep your audience engaged.' },
-    { num: '04', title: 'Your Global Snapshot:', body: 'Get a quick, clear overview of your entire operation.' },
-  ];
+const features = [
+  {
+    area: "Ultra-fast browsing",
+    webSurge: { text: "Fast browsing", check: true },
+    hyperView: { text: "Moderate speeds", check: false },
+  },
+  {
+    area: "Advanced AI insights",
+    webSurge: { text: "Basic AI recommendations", check: true },
+    hyperView: { text: "No AI assistance", check: false },
+  },
+  {
+    area: "Seamless integration",
+    webSurge: { text: "Restricts customization", check: true },
+    hyperView: { text: "Steep learning curve", check: false },
+  },
+  {
+    area: "Advanced AI insights",
+    webSurge: { text: "Basic AI insights", check: false },
+    hyperView: { text: "No AI assistance", check: false },
+  },
+  {
+    area: "Ultra-fast browsing",
+    webSurge: { text: "Fast browsing", check: true },
+    hyperView: { text: "Moderate speeds", check: false },
+  },
+  {
+    area: "Full UTF-8 support",
+    webSurge: { text: "Potential display errors", check: false },
+    hyperView: { text: "Partial UTF-8 support", check: false },
+  },
+];
 
+export default function Section4() {
   return (
-    <section className="bg-white px-16 pb-24">
-      <div className="rounded-2xl overflow-hidden mb-16 w-full h-80 md:h-96">
-        <img
-          src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80"
-          alt="Colorful mountain landscape"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section id="specifications" className="w-full bg-white py-24 px-4 flex flex-col items-center">
+      {/* Header */}
+      <p className="text-sm text-green-600 font-medium mb-4 tracking-wide">
+        Specs
+      </p>
+      <h2 className="text-5xl font-serif text-center text-black mb-5">
+        Why Choose Area?
+      </h2>
+      <p className="text-center text-gray-500 max-w-lg mb-10 text-sm leading-relaxed">
+        You need a solution that keeps up. That's why we developed Area. A
+        developer-friendly approach to streamline your business.
+      </p>
+      <button className="mb-20 px-7 py-3 rounded-full bg-green-100 text-green-800 text-sm font-medium hover:bg-green-200 transition-colors">
+        Discover More
+      </button>
 
-      <div className="border border-dashed border-blue-300 rounded-2xl overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="p-10 flex flex-col justify-between">
-            <div>
-              <h2
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight"
-                style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-              >
-                See the Big Picture
-              </h2>
-              <p className="text-sm text-gray-400 mb-10 leading-relaxed">
-                Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.
-              </p>
-              <div className="flex flex-col divide-y divide-gray-100">
-                {highlights.map((item) => (
-                  <div key={item.num} className="flex gap-6 py-4">
-                    <span className="text-xs text-gray-300 w-6 shrink-0 pt-0.5 font-mono">{item.num}</span>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      <span className="font-semibold text-gray-800">{item.title}</span> {item.body}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="mt-10">
-              <a
-                href="#"
-                className="inline-block text-sm font-medium px-5 py-2.5 rounded-full transition-opacity hover:opacity-80"
-                style={{ backgroundColor: "#d6e4b8", color: "#3a4e1a" }}
-              >
-                Discover More
-              </a>
-            </div>
+      {/* Table */}
+      <div className="w-full max-w-4xl">
+        {/* Column Headers */}
+        <div className="grid grid-cols-3 mb-0">
+          {/* Area header — white card */}
+          <div className="bg-white border border-gray-200 rounded-t-2xl py-6 px-8 flex items-center justify-center">
+            <span className="text-xl font-bold text-black">Area</span>
           </div>
-
-          <div
-            className="flex items-end justify-center overflow-hidden rounded-r-2xl"
-            style={{ backgroundColor: "#e8dfc8", minHeight: "420px" }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80"
-              alt="Abstract product display"
-              className="w-full h-full object-cover object-center"
-            />
+          <div className="py-6 px-8 flex items-center justify-center border-b border-gray-200">
+            <span className="text-xl text-gray-400">WebSurge</span>
+          </div>
+          <div className="py-6 px-8 flex items-center justify-center border-b border-gray-200">
+            <span className="text-xl text-gray-400">HyperView</span>
           </div>
         </div>
+
+        {/* Rows */}
+        {features.map((row, i) => (
+          <div key={i} className="grid grid-cols-3">
+            {/* Area column */}
+            <div
+              className={`bg-white border-l border-r border-gray-200 px-8 py-5 flex items-center gap-2 text-sm text-gray-700 ${
+                i === features.length - 1 ? "border-b rounded-b-2xl" : ""
+              }`}
+            >
+              <span className="text-green-600 font-bold">✓</span>
+              {row.area}
+            </div>
+
+            {/* WebSurge column */}
+            <div className="px-8 py-5 flex items-center gap-2 text-sm text-gray-500 border-b border-gray-100">
+              {row.webSurge.check ? (
+                <span className="text-green-500 font-bold">✓</span>
+              ) : (
+                <span className="text-red-400 font-bold">✕</span>
+              )}
+              <span className="font-mono">{row.webSurge.text}</span>
+            </div>
+
+            {/* HyperView column */}
+            <div className="px-8 py-5 flex items-center gap-2 text-sm text-gray-500 border-b border-gray-100">
+              <span className="text-red-400 font-bold">✕</span>
+              <span className="font-mono">{row.hyperView.text}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
