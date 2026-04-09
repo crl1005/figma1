@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Section6() {
   return (
     <section className="w-full bg-white py-16 px-4">

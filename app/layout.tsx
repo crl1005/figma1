@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Area — Smart regional insights",
+  title: "Area practice",
   description: "Area helps teams visualize regional performance, coordinate across markets, and make faster decisions.",
 };
 
