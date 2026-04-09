@@ -1,97 +1,78 @@
 const features = [
   {
-    area: "Ultra-fast browsing",
-    webSurge: { text: "Fast browsing", check: true },
-    hyperView: { text: "Moderate speeds", check: false },
+    area: "Real-time regional dashboards",
+    webSurge: { text: "Delayed updates", check: true },
+    hyperView: { text: "No live insights", check: false },
   },
   {
-    area: "Advanced AI insights",
-    webSurge: { text: "Basic AI recommendations", check: true },
-    hyperView: { text: "No AI assistance", check: false },
+    area: "Adaptive language support",
+    webSurge: { text: "Basic translation", check: true },
+    hyperView: { text: "Limited localization", check: false },
   },
   {
-    area: "Seamless integration",
-    webSurge: { text: "Restricts customization", check: true },
-    hyperView: { text: "Steep learning curve", check: false },
+    area: "Scalable API-first architecture",
+    webSurge: { text: "Legacy integrations", check: true },
+    hyperView: { text: "Rigid workflows", check: false },
   },
   {
-    area: "Advanced AI insights",
-    webSurge: { text: "Basic AI insights", check: false },
-    hyperView: { text: "No AI assistance", check: false },
+    area: "Automated alerts and workflows",
+    webSurge: { text: "Manual review", check: false },
+    hyperView: { text: "No automation", check: false },
   },
   {
-    area: "Ultra-fast browsing",
-    webSurge: { text: "Fast browsing", check: true },
-    hyperView: { text: "Moderate speeds", check: false },
+    area: "Clear cost forecasting",
+    webSurge: { text: "Hidden fees", check: false },
+    hyperView: { text: "Unclear billing", check: false },
   },
   {
-    area: "Full UTF-8 support",
-    webSurge: { text: "Potential display errors", check: false },
-    hyperView: { text: "Partial UTF-8 support", check: false },
+    area: "24/7 support coverage",
+    webSurge: { text: "Limited service hours", check: false },
+    hyperView: { text: "Email-only help", check: false },
   },
 ];
 
-export default function Section4() {
+export default function Section5() {
   return (
-    <section id="specifications" className="w-full bg-white py-24 px-4 flex flex-col items-center">
-      {/* Header */}
-      <p className="text-sm text-green-600 font-medium mb-4 tracking-wide">
-        Specs
-      </p>
-      <h2 className="text-5xl font-serif text-center text-black mb-5">
-        Why Choose Area?
-      </h2>
-      <p className="text-center text-gray-500 max-w-lg mb-10 text-sm leading-relaxed">
-        You need a solution that keeps up. That's why we developed Area. A
-        developer-friendly approach to streamline your business.
-      </p>
-      <button className="mb-20 px-7 py-3 rounded-full bg-green-100 text-green-800 text-sm font-medium hover:bg-green-200 transition-colors">
-        Discover More
-      </button>
+    <section id="specifications" className="bg-slate-50 py-24 px-6 md:px-16">
+      <div className="mx-auto max-w-6xl text-center mb-14">
+        <p className="text-sm uppercase tracking-[0.32em] text-emerald-600 mb-4">Specifications</p>
+        <h2 className="text-5xl font-serif text-slate-900 mb-5">Why teams choose Area.</h2>
+        <p className="mx-auto max-w-2xl text-sm text-slate-500 leading-relaxed">
+          Compare the experience that Area delivers versus legacy tools designed for old workflows.
+        </p>
+      </div>
 
-      {/* Table */}
-      <div className="w-full max-w-4xl">
-        {/* Column Headers */}
-        <div className="grid grid-cols-3 mb-0">
-          {/* Area header — white card */}
-          <div className="bg-white border border-gray-200 rounded-t-2xl py-6 px-8 flex items-center justify-center">
-            <span className="text-xl font-bold text-black">Area</span>
-          </div>
-          <div className="py-6 px-8 flex items-center justify-center border-b border-gray-200">
-            <span className="text-xl text-gray-400">WebSurge</span>
-          </div>
-          <div className="py-6 px-8 flex items-center justify-center border-b border-gray-200">
-            <span className="text-xl text-gray-400">HyperView</span>
-          </div>
+      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="grid grid-cols-3 gap-px bg-slate-200 text-center py-6 px-2">
+          <div className="bg-white py-6 px-8 font-semibold text-slate-900">Area</div>
+          <div className="bg-slate-50 py-6 px-8 text-slate-500">WebSurge</div>
+          <div className="bg-slate-50 py-6 px-8 text-slate-500">HyperView</div>
         </div>
 
-        {/* Rows */}
         {features.map((row, i) => (
-          <div key={i} className="grid grid-cols-3">
-            {/* Area column */}
-            <div
-              className={`bg-white border-l border-r border-gray-200 px-8 py-5 flex items-center gap-2 text-sm text-gray-700 ${
-                i === features.length - 1 ? "border-b rounded-b-2xl" : ""
-              }`}
-            >
-              <span className="text-green-600 font-bold">✓</span>
+          <div
+            key={i}
+            className={`grid grid-cols-3 gap-px ${i % 2 === 0 ? 'bg-slate-100' : 'bg-white'}`}
+          >
+            <div className="bg-white px-8 py-5 flex items-center gap-3 text-sm text-slate-700">
+              <span className="text-emerald-600 font-bold">✓</span>
               {row.area}
             </div>
-
-            {/* WebSurge column */}
-            <div className="px-8 py-5 flex items-center gap-2 text-sm text-gray-500 border-b border-gray-100">
+            <div className="bg-slate-50 px-8 py-5 flex items-center gap-3 text-sm text-slate-500">
               {row.webSurge.check ? (
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-500 font-bold">✓</span>
               ) : (
                 <span className="text-red-400 font-bold">✕</span>
               )}
-              <span className="font-mono">{row.webSurge.text}</span>
+              {row.webSurge.text}
             </div>
-
-            {/* HyperView column */}
-            <div className="px-8 py-5 flex items-center gap-2 text-sm text-gray-500 border-b border-gray-100">
-              <span className="text-red-400 font-bold">✕</span>
-              <span className="font-mono">{row.hyperView.text}</span>
+            <div className="bg-slate-50 px-8 py-5 flex items-center gap-3 text-sm text-slate-500">
+              {row.hyperView.check ? (
+                <span className="text-emerald-500 font-bold">✓</span>
+              ) : (
+                <span className="text-red-400 font-bold">✕</span>
+              )}
+              {row.hyperView.text}
             </div>
           </div>
         ))}

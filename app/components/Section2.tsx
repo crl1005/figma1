@@ -1,35 +1,48 @@
 export default function Section2() {
   return (
-    <section className="bg-white px-16 pt-16 pb-8">
-      <p className="text-sm text-gray-400 mb-8">Trusted by:</p>
-      <div className="flex flex-wrap items-center justify-between gap-8">
-        <div className="flex items-center gap-2 text-gray-300">
-          <svg width="40" height="32" viewBox="0 0 40 32" fill="none">
-            <path d="M0 16 L16 0 L24 8 L16 16 L24 24 L40 8 L40 24 L24 32 L16 24 Z" fill="#c8c8c8"/>
-          </svg>
+    <section className="bg-slate-50 px-6 py-16 md:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.32em] text-emerald-600 mb-3">Trusted by</p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 max-w-2xl">
+              Teams across industries rely on Area for smarter regional decisions.
+            </h2>
+          </div>
+          <p className="text-sm text-slate-500 max-w-md">
+            From logistics to marketing, our platform gives leaders the clarity they need to act quickly.
+          </p>
         </div>
-        <div className="flex items-center gap-2 text-gray-300">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="2" width="7" height="7" rx="1" fill="#c8c8c8"/>
-            <rect x="11" y="2" width="7" height="7" rx="1" fill="#c8c8c8"/>
-            <rect x="2" y="11" width="7" height="7" rx="1" fill="#c8c8c8"/>
-            <rect x="11" y="11" width="7" height="7" rx="1" fill="#c8c8c8"/>
-          </svg>
-          <span className="text-base font-semibold text-gray-300">Logoipsum</span>
+
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-5">
+          <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center justify-center">
+            <svg width="40" height="32" viewBox="0 0 40 32" fill="none">
+              <path d="M0 16 L16 0 L24 8 L16 16 L24 24 L40 8 L40 24 L24 32 L16 24 Z" fill="#6b7280"/>
+            </svg>
+          </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="3" y="3" width="12" height="12" rx="3" fill="#6b7280"/>
+              <rect x="17" y="3" width="12" height="12" rx="3" fill="#6b7280"/>
+              <rect x="3" y="17" width="12" height="12" rx="3" fill="#6b7280"/>
+              <rect x="17" y="17" width="12" height="12" rx="3" fill="#6b7280"/>
+            </svg>
+          </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center justify-center">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="12" cy="12" r="8" fill="#6b7280"/>
+              <circle cx="24" cy="12" r="8" fill="#6b7280"/>
+              <circle cx="12" cy="24" r="8" fill="#6b7280"/>
+              <circle cx="24" cy="24" r="8" fill="#6b7280"/>
+            </svg>
+          </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center justify-center">
+            <span className="text-base font-semibold text-slate-700 tracking-[0.24em]">BRANDCO</span>
+          </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200 flex items-center justify-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-700">Global Labs</span>
+          </div>
         </div>
-        <div className="text-gray-300">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <circle cx="12" cy="12" r="8" fill="#c8c8c8"/>
-            <circle cx="24" cy="12" r="8" fill="#c8c8c8"/>
-            <circle cx="12" cy="24" r="8" fill="#c8c8c8"/>
-            <circle cx="24" cy="24" r="8" fill="#c8c8c8"/>
-          </svg>
-        </div>
-        <span className="text-xl font-light tracking-widest text-gray-300">Logoipsum</span>
-        <span className="text-lg font-bold tracking-widest text-gray-300" style={{ letterSpacing: "0.15em" }}>
-          LOGO<span className="font-light">IPSUM</span>™
-        </span>
-        <span className="border border-gray-300 text-gray-300 text-sm px-4 py-1.5 rounded-full">logoipsum</span>
       </div>
     </section>
   );
